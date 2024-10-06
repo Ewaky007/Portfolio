@@ -1,0 +1,177 @@
+/* Header */
+header {
+    background-color: #007bff;
+}
+
+/* Animation barre de progression au survol */
+.navbar-nav .nav-item .nav-link {
+    position: relative;
+    color: #fff;
+    padding-bottom: 5px;
+    transition: color 0.3s ease; /* Pour changer la couleur du texte */
+}
+
+.nav-item{
+    margin: 0 10px;
+}
+
+/* Barre de progression */
+.navbar-nav .nav-item .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.4s ease; /* Animation de la largeur */
+}
+
+/* Barre de progression sur hover */
+.navbar-nav .nav-item .nav-link:hover::after {
+    width: 100%; /* La barre s'étend sur toute la largeur au survol */
+}
+
+/* Changement de la couleur du texte sur hover */
+.navbar-nav .nav-item .nav-link:hover {
+    color: #ffdd57; /* Couleur personnalisée lors du survol */
+}
+
+/* Lien actif (lorsqu'on est sur la page correspondante) */
+.navbar-nav .nav-item .nav-link.active {
+    color: #ffdd57; /* Couleur spéciale pour le lien actif */
+}
+
+/* Effet lumineux pour le lien actif */
+.navbar-nav .nav-item .nav-link.active::after {
+    width: 100%; /* La barre de progression est pleine */
+    background-color: #ffdd57; /* Couleur spéciale pour la barre active */
+}
+
+
+/* Particles container to cover the whole background */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1; /* behind other content */
+}
+
+/* Sections should appear on top of the particle background */
+section {
+    position: relative;
+    z-index: 1; /* above particles */
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+    color: #ffffff; /* Ensure text is white for contrast */
+    padding: 20px; /* Add padding for some spacing inside the sections */
+    border-radius: 8px; /* Optional: for rounded corners */
+    margin-bottom: 20px; /* Space between sections */
+}
+
+/* Ensure container aligns properly over the particle background */
+.container-fluid {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* Optional: Style for the right part */
+.right {
+    background-color: rgba(0, 0, 0, 0.7); /* Same semi-transparent effect for right part */
+    padding: 20px;
+    color: #ffffff;
+    border-radius: 8px;
+}
+
+/* General page body style */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    background-color: #000; /* Optional: fallback background color */
+}
+
+
+/* Make sure padding doesn't break the grid layout */
+.left, .right {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left {
+    border: 3px solid #007bff;
+}
+
+/* Ensure text stays inside the box */
+.project .description, .right p {
+    word-wrap: break-word;
+}
+
+.description{
+    margin-left: 15px;
+}
+
+@media (max-width: 768px) {
+    /* On small screens, columns stack */
+    .left, .right {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* Titles */
+h2.title, h3.title {
+    font-weight: 700;
+}
+
+h2.title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+h3.title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #5aadf1;
+    margin-left: 5px;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 15px 0;
+}
+
+footer span {
+    font-size: 14px;
+}
+
+/* Container Padding */
+.container-fluid {
+    padding: 0 40px;
+}
+
+/* Additional Padding to ensure no elements stick to the edges */
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Additional Styles */
+a.nav-link {
+    font-size: 16px;
+    padding: 8px 15px;
+}
+
+a.nav-link.active {
+    font-weight: bold;
+}
