@@ -58,6 +58,7 @@ header {
 .navbar-nav .nav-link.active {
     color: #EFC8A2;
     font-weight: bold;
+    
 }
 
 .navbar-nav .nav-link.active::after {
