@@ -1,147 +1,190 @@
+/* Global Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: black;
+    scroll-behavior: smooth;
+}
+
 /* Header */
 header {
-    background-color: #007bff;
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: rgb(139, 58, 58); /* Harmonisé avec le thème rougeâtre */
+    top: 0;
+    z-index: 5; /* Ensure it stays above other content */
 }
 
-/* Animation barre de progression au survol */
-.navbar-nav .nav-item .nav-link {
-    position: relative;
-    color: #fff;
-    padding-bottom: 5px;
-    transition: color 0.3s ease; /* Pour changer la couleur du texte */
-}
-
-.nav-item{
+/* Navbar Links */
+.navbar-nav .nav-item {
     margin: 0 10px;
 }
 
-/* Barre de progression */
-.navbar-nav .nav-item .nav-link::after {
+.navbar-nav .nav-link {
+    position: relative;
+    color: #fff;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+    font-size: 16px;
+    padding: 8px 15px;
+}
+
+/* Progress Bar on Hover */
+.navbar-nav .nav-link::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 0%;
+    width: 0;
     height: 2px;
     background-color: #fff;
-    transition: width 0.4s ease; /* Animation de la largeur */
+    transition: width 0.4s ease;
 }
 
-/* Barre de progression sur hover */
-.navbar-nav .nav-item .nav-link:hover::after {
-    width: 100%; /* La barre s'étend sur toute la largeur au survol */
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
 }
 
-/* Changement de la couleur du texte sur hover */
-.navbar-nav .nav-item .nav-link:hover {
-    color: #ffdd57; /* Couleur personnalisée lors du survol */
+.navbar-nav .nav-link:hover {
+    color: #EFC8A2; /* Teinte douce harmonisée */
 }
 
-/* Lien actif (lorsqu'on est sur la page correspondante) */
-.navbar-nav .nav-item .nav-link.active {
-    color: #ffdd57; /* Couleur spéciale pour le lien actif */
+/* Active Link Styling */
+.navbar-nav .nav-link.active {
+    color: #EFC8A2;
+    font-weight: bold;
 }
 
-/* Effet lumineux pour le lien actif */
-.navbar-nav .nav-item .nav-link.active::after {
-    width: 100%; /* La barre de progression est pleine */
-    background-color: #ffdd57; /* Couleur spéciale pour la barre active */
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+    background-color: #EFC8A2;
 }
 
-
-/* Particles container to cover the whole background */
+/* Particle Background */
 #particles-js {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
-    position: fixed;
     top: 0;
     left: 0;
-    z-index: -1; /* behind other content */
+    z-index: 1;
 }
 
-/* Sections should appear on top of the particle background */
+/* Section Styling */
 section {
     position: relative;
-    z-index: 1; /* above particles */
-    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
-    color: #ffffff; /* Ensure text is white for contrast */
-    padding: 20px; /* Add padding for some spacing inside the sections */
-    border-radius: 8px; /* Optional: for rounded corners */
-    margin-bottom: 20px; /* Space between sections */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent noir pour voir l'arrière-plan */
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
-/* Ensure container aligns properly over the particle background */
+/* Container */
 .container-fluid {
     position: relative;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0);
+    padding: 0 40px;
+    background-color: transparent;
 }
 
-/* Optional: Style for the right part */
-.right {
-    background-color: rgba(0, 0, 0, 0.7); /* Same semi-transparent effect for right part */
-    padding: 20px;
-    color: #ffffff;
-    border-radius: 8px;
-}
-
-/* General page body style */
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scroll */
-    background-color: #000; /* Optional: fallback background color */
-}
-
-
-/* Make sure padding doesn't break the grid layout */
+/* Left and Right Div Styling */
 .left, .right {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.left {
-    border: 3px solid #007bff;
+.right .title h3{
+    color: #B25C5C;
+    font-style: oblique;
+    font-weight: bold;
 }
 
-/* Ensure text stays inside the box */
+/* Sticky position for larger screens */
+@media (min-width: 768px) {
+    .right {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        position: fixed; /* Sticky for larger screens */
+        top: 110px; /* Stick to the top with 20px margin */
+        right: 50px;
+        width: 100%; /* Use full width within the column */
+        border-radius: 8px;
+        border: 3px solid #8B3A3A;    
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 0; /* Ensure it stays above content */
+    }
+}
+
+/* On smaller screens, disable sticky and make it behave normally */
+@media (max-width: 767px) {
+    .right {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        right: 0;
+        top: 0;
+        position: relative; /* Standard positioning for smaller screens */
+        margin-bottom: 20px; /* Add some space at the bottom */
+        width: 100%; /* Ensure it uses full width on mobile */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+
+
+
+
+/* Text Wrapping */
 .project .description, .right p {
     word-wrap: break-word;
 }
 
-.description{
+#schoolProject, #personalProject {
+    z-index: 2;
+}
+
+.description {
     margin-left: 15px;
 }
 
-@media (max-width: 768px) {
-    /* On small screens, columns stack */
-    .left, .right {
-        margin-left: 0;
-        margin-right: 0;
-    }
-}
-
 /* Titles */
-h2.title, h3.title {
-    font-weight: 700;
-}
-
 h2.title {
+    font-weight: 700;
     font-size: 28px;
     margin-bottom: 20px;
-    color: #007bff;
+    color: #ffe81e;
 }
 
 h3.title {
+    font-weight: 700;
     font-size: 20px;
     margin-bottom: 10px;
-    color: #5aadf1;
     margin-left: 5px;
+    color: #F3CD05;
 }
 
 .project {
     margin-bottom: 20px;
+}
+
+/* Button Styling */
+button {
+    background-color: #8B3A3A; /* Harmonisé avec le rougeâtre */
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #B25C5C; /* Variation au survol */
 }
 
 /* Footer */
@@ -155,23 +198,10 @@ footer span {
     font-size: 14px;
 }
 
-/* Container Padding */
-.container-fluid {
-    padding: 0 40px;
-}
-
-/* Additional Padding to ensure no elements stick to the edges */
-body {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-/* Additional Styles */
-a.nav-link {
-    font-size: 16px;
-    padding: 8px 15px;
-}
-
-a.nav-link.active {
-    font-weight: bold;
+/* Responsive */
+@media (max-width: 768px) {
+    .left, .right {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
