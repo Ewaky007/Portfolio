@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Brugnon Matheo</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Particles.js container -->
+    <div id="particles-js"></div>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <i class="fas fa-code mr-2"></i>Matheo Brugnon - Portfolio 
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#accueil">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projets">Projets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Left Column - Projects -->
+            <div class="col-lg-8">
+                <!-- School Projects -->
+                <section id="schoolProject">
+                    <h2 class="title">
+                        <i class="fas fa-graduation-cap mr-3"></i>Projets Académiques
+                    </h2>
+                    <div class="project">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-map-pin"></i>
+                            </div>
+                            <h3 class="project-title">ANNONCES</h3>
+                        </div>
+                        <p class="project-description">
+                            <br>
+                            Les projets qui ne peuvent pas être consultés à partir de ce site sont actuellement en cours de restructuration. <br>
+                            Ils seront bientôt disponibles via les boutons situés sous chaque projet.
+                            
+                        </p>
+                    </div>
+
+                    <!-- Unlock Game -->
+                    <div class="project">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <h3 class="project-title">Unlock Game - Jeu d'évasion interactif</h3>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">JavaFX</span>
+                            <span class="tag">JavaSwing</span>
+                            <span class="tag">CMI</span>
+                        </div>
+                        <p class="project-description">
+                            Adaptation originale du célèbre jeu de société "Unlock". Dans cette version, vous incarnez 
+                            un étudiant qui doit rejoindre l'université à temps, mais des énigmes et obstacles se dressent 
+                            sur votre chemin. Interface graphique intuitive avec animations et système de progression.
+                            <br>
+                            <br>
+                            Equipe : François Fabre
+                        </p>
+                        <a href="#" class="btn-project disabled">
+                            <i class="fas fa-external-link-alt mr-2"></i>Découvrir le projet
+                        </a>
+                    </div>
+
+                    <!-- Puzzle AI -->
+                    <div class="project">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3 class="project-title">Puzzle AI - Intelligence Artificielle</h3>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">IA</span>
+                            <span class="tag">L1</span>
+                        </div>
+                        <p class="project-description">
+                            Développement d'une intelligence artificielle capable de résoudre des puzzles
+                            en utilisant la reconnaissance de formes, traits et couleur en se basant sur l'image de couverture
+                            de votre puzzle.
+                        </p>
+                        <a href="https://github.com/Ewaky007/PuzzleAI.git" class="btn-project">
+                            <i class="fab fa-github mr-2"></i>Voir sur GitHub
+                        </a>
+                    </div>
+
+                    <!-- Création Musique Python -->
+                    <div class="project">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <h3 class="project-title">Génération Musicale</h3>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Traitement Audio</span>
+                            <span class="tag">CMI</span>
+                        </div>
+                        <p class="project-description">
+                            Création d'un système de génération musicale utilisant des fichiers binaire structurés. 
+                            Analyse de structure et génération d'audio avec différents styles et instruments (guitare, piano, ..).
+                        </p>
+                        <a href="#" class="btn-project disabled">
+                            <i class="fas fa-headphones mr-2"></i>Écouter
+                        </a>
+                    </div>
+
+                    <!-- Reconstruction 3D -->
+                    <div class="project">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-cubes"></i>
+                            </div>
+                            <h3 class="project-title">Reconstruction 3D par Gaussian Splatting</h3>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">COLMAP</span>
+                            <span class="tag">Gaussian Splatting</span>
+                            <span class="tag">Supercalculateur ROMEO</span>
+                            <span class="tag">L2</span>
+                        </div>
+                        <p class="project-description">
+                            Projet de recherche utilisant des méthodes avancées de reconstruction 3D. 
+                            Utilisation de COLMAP pour la photogrammétrie et implémentation de méthodes 
+                            Gaussian Splatting sur le supercalculateur ROMEO pour le rendu temps réel et réaliste.
+                        </p>
+                        <a href="#" class="btn-project disabled">
+                            <i class="fas fa-vr-cardboard mr-2"></i>Voir la démo
+                        </a>
+                    </div>
+
+                     <!-- API JWT -->
+                    <div class="project">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <h3 class="project-title">API REST avec Authentification JWT</h3>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">JWT</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">CMI</span>
+                        </div>
+                        <p class="project-description">
+                            Conception et développement d'une API REST sécurisée avec Spring Boot. 
+                            Implémentation de l'authentification JWT, gestion des rôles utilisateurs et des failles basiques.
+                        </p>
+                        <a href="https://gitlab-mi.univ-reims.fr/brug0022/cmi0602.git" class="btn-project">
+                            <i class="fas fa-code-branch mr-2"></i>Explorer l'API
+                        </a>
+                    </div>
+
+                    <!-- Unity Game -->
+                    <div class="project">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-cube"></i>
+                            </div>
+                            <h3 class="project-title">Jeu 3D sous Unity</h3>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Unity</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">3D</span>
+                            <span class="tag">L3</span>
+                        </div>
+                        <p class="project-description">
+                            Développement d'un jeu sous le thème "Gam Jam" en 3D sous Unity. Création des mécaniques de jeu, 
+                            intégration des assets et optimisation des performances.
+                        </p>
+                        <a href="#" class="btn-project disabled">
+                            <i class="fas fa-play mr-2"></i>Jouer
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Personal Projects (can be added similarly) -->
+                <section id="personalProject" class="mt-5">
+                    <h2 class="title">
+                        <i class="fas fa-user mr-3"></i>Projets Personnels
+                    </h2>
+                    <div class="project">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-cube"></i>
+                            </div>
+                            <h3 class="project-title">Bientôt disponible</h3>
+                        </div>
+                        <!-- <div class="project-tags">
+                            <span class="tag">Unity</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">3D</span>
+                        </div> -->
+                        <p class="project-description">
+                            Cette section sera prochainement mis à jour !
+                        </p>
+                        <span class="btn-project disabled">
+                            <i class="fas fa-play mr-2"></i>Non disponible
+                        </span>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column - Skills -->
+            <div class="col-lg-4">
+                <div class="right-panel">
+                    <!-- Profile Card -->
+                    <div class="info-card">
+                        <div class="profile-header">
+                            <h1 class="profile-name">Brugnon Mathéo</h1>
+                            <p class="profile-title">Étudiant en Informatique | Licence & CMI </p>
+                        </div>
+                        
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>matheobrugnon@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>France</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-github"></i>
+                                <span>github.com/Ewaky007</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-linkedin"></i>
+                                <span>linkedin.com/in/ewaky2</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Skills -->
+                    <div class="info-card">
+                        <h3 class="category-title">
+                            <i class="fas fa-laptop-code mr-2"></i>Compétences Techniques
+                        </h3>
+                        
+                        <div class="skills-category">
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-java"></i></div>
+                                <div class="skill-content">
+                                    <div class="skill-name">Java / JavaFX / Swing</div>
+                                    <div class="skill-desc">Développement d'applications diverses</div>
+                                    <div class="skill-tech">Unlock Game, PuzzleAI, API JWT</div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-cubes"></i></div>
+                                <div class="skill-content">
+                                    <div class="skill-name">COLMAP / Gaussian Splatting</div>
+                                    <div class="skill-desc">Reconstruction 3D</div>
+                                    <div class="skill-tech">Supercalculateur ROMEO</div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-python"></i></div>
+                                <div class="skill-content">
+                                    <div class="skill-name">Python</div>
+                                    <div class="skill-desc">Traitement audio, fichiers bianire structurés</div>
+                                    <div class="skill-tech">Création musicale</div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                                <div class="skill-content">
+                                    <div class="skill-name">Spring Boot / JWT</div>
+                                    <div class="skill-desc">Développement d'une API sécurisée</div>
+                                    <div class="skill-tech">API REST, Authentification JWS</div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-unity"></i></div>
+                                <div class="skill-content">
+                                    <div class="skill-name">Unity 3D</div>
+                                    <div class="skill-desc">Développement d'un jeu (thème : "Gam Jam")</div>
+                                    <div class="skill-tech">C#, 3D, Physique</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Personal Skills -->
+                    <div class="info-card">
+                        <h3 class="category-title">
+                            <i class="fas fa-user-tie mr-2"></i>Compétences Personnelles
+                        </h3>
+
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-users"></i></div>
+                            <div class="skill-content">
+                                <div class="skill-name">Relation client / Organisation</div>
+                                <div class="skill-desc">Station AREAS - Gestion de la relation client et organisation des services</div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                            <div class="skill-content">
+                                <div class="skill-name">Pédagogue</div>
+                                <div class="skill-desc">Professeur de mathématiques - Cours particuliers du collège au lycée</div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-hard-hat"></i></div>
+                            <div class="skill-content">
+                                <div class="skill-name">Polyvalent / Opiniâtre</div>
+                                <div class="skill-desc">Paysagiste, Barman, Serveur, Traiteur, Employé polyvalent, Professeur de maths</div>
+                                <div class="skill-tech">Adaptabilité, travail d'équipe, gestion du stress</div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-clock"></i></div>
+                            <div class="skill-content">
+                                <div class="skill-name">Expériences diverses</div>
+                                <div class="skill-desc">+4 ans d'expérience dans différents secteurs, développant une forte capacité d'adaptation</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Languages -->
+                    <div class="info-card">
+                        <h3 class="category-title">
+                            <i class="fas fa-language mr-2"></i>Langues
+                        </h3>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-flag"></i></div>
+                            <div class="skill-content">
+                                <div class="skill-name">Français</div>
+                                <div class="skill-desc">Langue maternelle</div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-flag-usa"></i></div>
+                            <div class="skill-content">
+                                <div class="skill-name">Anglais</div>
+                                <div class="skill-desc">Intermédiaire (B1)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">2024 &#xa9; Portfolio de Mathéo Brugnon - Tous droits réservés</p>
+            <p class="mb-0 mt-2">
+                <i class="fas fa-code mr-2"></i>Fait avec passion par Ewaky
+                <i class="fas fa-heart text-danger ml-2"></i>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/particles.js"></script>
+</body>
+</html>
