@@ -391,3 +391,34 @@
                 font-size: 24px;
             }
         }
+
+        /* Academic Level Sections */
+        .academic-level {
+            background: rgba(139, 58, 58, 0.15);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-left: 5px solid #8B3A3A;
+            border: 1px solid #8B3A3A;
+        }
+
+        .academic-level-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #EFC8A2;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #8B3A3A;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .academic-level .project {
+            background: rgba(20, 20, 20, 0.6);
+            margin-bottom: 18px;
+        }
+
+        .academic-level .project:hover {
+            border-color: #EFC8A2;
+            box-shadow: 0 15px 30px rgba(139, 58, 58, 0.4);
+        }
