@@ -503,3 +503,84 @@
                 min-width: 100%;
             }
         }
+
+        /* Audio Section Styles */
+        .audio-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .audio-player {
+            padding: 20px;
+            background: rgba(139, 58, 58, 0.2);
+            border-radius: 10px;
+            border: 1px solid #8B3A3A;
+            transition: all 0.3s ease;
+        }
+
+        .audio-player:hover {
+            background: rgba(139, 58, 58, 0.3);
+            border-color: #EFC8A2;
+            box-shadow: 0 8px 20px rgba(139, 58, 58, 0.3);
+        }
+
+        .audio-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 10px;
+        }
+
+        .audio-title i {
+            color: #EFC8A2;
+            font-size: 20px;
+        }
+
+        .audio-title strong {
+            color: #EFC8A2;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .audio-player audio {
+            width: 100%;
+            margin-bottom: 12px;
+            outline: none;
+        }
+
+        /* Style des contrôles audio */
+        audio::-webkit-media-controls-panel {
+            background-color: rgba(139, 58, 58, 0.4);
+        }
+
+        audio::-webkit-media-controls-mute-button {
+            filter: invert(1);
+        }
+
+        audio::-webkit-media-controls-play-button {
+            filter: invert(1);
+        }
+
+        audio::-webkit-media-controls-volume-slider {
+            background-color: #8B3A3A;
+        }
+
+        .audio-player a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #EFC8A2;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+
+        .audio-player a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .audio-player a i {
+            font-size: 14px;
+        }
